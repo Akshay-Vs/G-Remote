@@ -105,7 +105,7 @@ try{
 
     #Creating git repository
     #Executin a python file
-    powershell -Command "python -u src/http_request.py '$Auth' '$Repo' '$Description' '$Private'"
+    powershell -Command "python -u Git-Remote/src/http_request.py '$Auth' '$Repo' '$Description' '$Private'"
 
     powershell -Command "git init"
     Write-Host "git: Initialized repository"
