@@ -14,7 +14,7 @@ $Parms = @{
 "$Parms"
 #Clearing Console
 powershell -Command "cls"
-$host.UI.RawUI.WindowTitle = "Git-Remote"
+powershell -Command $host.UI.RawUI.WindowTitle = "Git-Remote"
 
 function Download($name)
 {
@@ -127,6 +127,10 @@ try{
     powershell -Command "python -u Git-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
     Start-Process "https://github.com/$User/$Repo"
+    while(True)
+    {
+        powershell -Command = "exit"
+    }
 
 }
 catch{
