@@ -22,4 +22,3 @@ This is a tool that automatically creates a repository and generate essential re
 - <a href="https://raw.githubusercontent.com/Akshay-Vs/license-templates/master/templates"> Readme </a>
 - License
 
-<h4 align="center">&copy; 2022 Akshay-Vs</h4>
