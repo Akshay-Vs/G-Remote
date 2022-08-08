@@ -28,7 +28,6 @@ function Download($name)
 
 #Reading Credentials
 $User = Read-Host "Enter your github username"
-$User = $User -replace " ", "-"
 
 $Auth = Read-Host "Enter Auth key"
 if ($Auth -eq "")
@@ -128,7 +127,10 @@ try{
     powershell -Command "python -u Git-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
     Start-Process "https://github.com/$User/$Repo"
-    powershell -Command = "exit"
+    while(True)
+    {
+        powershell -Command = "exit"
+    }
 
 }
 catch{
