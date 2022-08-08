@@ -8,6 +8,7 @@ This is a tool that automatically creates a repository and generate essential re
 ```
   git clone https://github.com/Akshay-Vs/Git-Remote.git
   powershell -ExecutionPolicy ByPass -File Git-Remote/git-remote.ps1
+  
 ```
 
 ### Credentials
