@@ -14,7 +14,7 @@ $Parms = @{
 "$Parms"
 #Clearing Console
 powershell -Command "cls"
-powershell -Command $host.UI.RawUI.WindowTitle = "Git-Remote"
+$host.UI.RawUI.WindowTitle = "Git-Remote"
 
 function Download($name)
 {
