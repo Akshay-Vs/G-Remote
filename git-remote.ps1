@@ -104,16 +104,16 @@ try{
 
     #Creating git repository
     #Executin a python file
-    powershell -Command "python -u http_request.py '$Auth' '$Repo' '$Description' '$Private'"
+    powershell -Command "python -u src/http_request.py '$Auth' '$Repo' '$Description' '$Private'"
 
     powershell -Command "git init"
     Write-Host "git: Initialized repository"
     powershell -Command "git add ."
     powershell -Command 'git commit . -m "Initial Commit"'
     Write-Host "git: Repository ready to push"
-    powershell -Command "python -u put_request.py 'Readme.md' '$Auth' '$User' '$Repo' 'README.md'"
-    powershell -Command "python -u put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
-    powershell -Command "python -u put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
+    powershell -Command "python -u src/put_request.py 'Readme.md' '$Auth' '$User' '$Repo' 'README.md'"
+    powershell -Command "python -u src/put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
+    powershell -Command "python -u src/put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
 }
 catch{
