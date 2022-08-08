@@ -1,6 +1,6 @@
 <h1 align="center"> Git-Remote </h1>
 <h4 align="center"> 
- This is a tool that uses Github API to create a repository, essential license, and readme template in console written in PowerShell ps1</h4>
+ This is a tool that uses Github API to create a repository, essential license, and readme template from console written in PowerShell ps1</h4>
 
 - ## Status - Testing Stage <br>
 # Installation and Usage
