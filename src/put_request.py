@@ -12,7 +12,7 @@ filename = argv[5]
 url = f"https://api.github.com/repos/{username}/{Repo}/contents/{filename}"
 
 payload = json.dumps({
-  "message": "message",
+  "message": f"Create{argv[5]}",
   "content": f"{data}"
 })
 headers = {
