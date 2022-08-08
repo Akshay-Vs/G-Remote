@@ -1,7 +1,7 @@
 import requests
 import json
 from sys import argv
-from src.base64enc import encode
+from base64enc import encode
 
 data = encode(open(argv[1], 'r').read())
 auth = argv[2]
