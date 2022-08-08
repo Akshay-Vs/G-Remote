@@ -123,6 +123,8 @@ try{
     powershell -Command "python -u Git-Remote\src\put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
     powershell -Command "python -u Git-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
+    Start-Process "https://github.com/$User/$Repo"
+
 }
 catch{
     Write-Host "Failed to initialize git repository`nCheck your credentials"
