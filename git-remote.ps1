@@ -13,7 +13,7 @@ $Parms = @{
 }
 
 #Clearing Console
--powershell -Command "cls"
+powershell -Command "cls"
 
 function Download($name)
 {
