@@ -11,7 +11,7 @@ $Parms = @{
     PassThru = $True
     ReleaseNotes = @("Initial Release")
 }
-
+"$Parms"
 #Clearing Console
 powershell -Command "cls"
 
@@ -28,7 +28,14 @@ function Download($name)
 #Reading Credentials
 $User = Read-Host "Enter your github username"
 $User = $User -replace " ", "-"
+
 $Auth = Read-Host "Enter Auth key"
+if ($Auth -eq "")
+{
+    Start-Process "https://github.com/settings/tokens"
+    $Auth = Read-Host "Enter Auth Key"
+}
+
 $Repo = Read-Host "Enter repository name" 
 $Repo = $Repo -replace " ", "-"
 $Description = Read-Host "Enter Description"
