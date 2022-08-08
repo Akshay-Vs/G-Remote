@@ -1,4 +1,20 @@
-src/__pycache__/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+.gitremote.ps1
+.http_request.py
+
+#official python gitignore
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -136,3 +152,4 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
