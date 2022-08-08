@@ -12,7 +12,8 @@ $Parms = @{
     ReleaseNotes = @("Initial Release")
 }
 
-
+#Clearing Console
+-powershell -Command "cls"
 
 function Download($name)
 {
