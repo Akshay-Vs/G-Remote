@@ -3,7 +3,7 @@
 This is a tool that automatically creates a repository and generate essential readme, license etc from console
 </h4>
 
-## - Status - Testing Stage <br>
+- ## Status - Testing Stage <br>
 # Installation and Usage
 ```
   git clone https://github.com/Akshay-Vs/Git-Remote.git
