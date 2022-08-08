@@ -112,9 +112,9 @@ try{
     powershell -Command "git add ."
     powershell -Command 'git commit . -m "Initial Commit"'
     Write-Host "git: Repository ready to push"
-    powershell -Command "python -u src\put_request.py 'Readme.md' '$Auth' '$User' '$Repo' 'README.md'"
-    powershell -Command "python -u src\put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
-    powershell -Command "python -u src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
+    powershell -Command "python -u Git-Remote\src\put_request.py 'Readme.md' '$Auth' '$User' '$Repo' 'README.md'"
+    powershell -Command "python -u Git-Remote\src\put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
+    powershell -Command "python -u Git-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
 }
 catch{
