@@ -9,6 +9,7 @@
   powershell -ExecutionPolicy ByPass -File Git-Remote/git-remote.ps1
   
 ```
+Copy and paste the command into the desired directory
 
 ### Credentials
 - Username  - Github username
@@ -20,4 +21,12 @@
 ### Templates
 - <a href="https://raw.githubusercontent.com/Akshay-Vs/license-templates/master/templates"> Readme </a>
 - License
+
+## Execution process
+- Downloading license and readme template from GitHub
+- Git starts in the local directory
+- Commits all files to the local repository
+- Creating a directory on GitHub using the Github API
+- Pushes all files to remote repository
+- Open the browser and redirect to the remote repository
 
