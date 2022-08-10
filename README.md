@@ -14,7 +14,7 @@ Copy and paste the command into the desired directory
 ## Credentials
 - Username  - Github username
 - Auth - <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Authention token</a>
-    - permission repo - Full control of private repository
+    - permission - repo:Full control of private repository
 - Repo name and Description<br>
 <i>Repos are private by default</i>
 
