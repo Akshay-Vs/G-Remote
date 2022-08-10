@@ -18,7 +18,7 @@ Copy and paste the command into the desired directory
   - <i>White spaces will be converted to '-' hyphen</i>
 - Enter a description
 - Select a license
- - The unlicensed license is the default
+  - <i>The unlicensed license is the default</i>
 - Wait for the process to complete and you will be redirected to the remote repository
 
 ## Execution process
