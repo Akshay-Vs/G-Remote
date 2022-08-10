@@ -4,7 +4,7 @@ import json
 
 url = "https://api.github.com/user/repos"
 
-print(sys.argv)
+#print(sys.argv)
 
 payload = json.dumps({
   "name": f"{sys.argv[2]}",
