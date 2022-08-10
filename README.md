@@ -6,7 +6,7 @@
 ```
   git clone https://github.com/Akshay-Vs/Git-Remote.git
   powershell -ExecutionPolicy ByPass -File Git-Remote/git-remote.ps1
-  
+
 ```
 Copy and paste the command into the desired directory
 
