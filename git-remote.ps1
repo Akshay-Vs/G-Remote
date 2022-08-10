@@ -41,7 +41,7 @@ $Description = Read-Host "Enter Description"
 $Private = "false"
 
 
-Write-Host "`n`n1) MIT`n2) Apache`n3) GPL3`n4) BSD3"
+Write-Host "`n`n0) Unlicense`n1) MIT`n2) Apache`n3) GPL3`n4) BSD3"
 $License = Read-Host "Chose a license template"
 
 $Year = Get-Date -Format yyyy
