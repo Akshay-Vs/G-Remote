@@ -1,11 +1,11 @@
-<h1 align="center"> Git-Remote </h1>
+<h1 align="center"> G-Remote </h1>
 <h4 align="center"> 
  This is a tool that uses Github API to create a repository, essential license, and readme template from console written in PowerShell ps1</h4>
 
 # Installation and Usage
 ```
-  git clone https://github.com/Akshay-Vs/Git-Remote.git
-  powershell -ExecutionPolicy ByPass -File Git-Remote/git-remote.ps1
+  git clone https://github.com/Akshay-Vs/G-Remote.git
+  powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
 
 ```
 Copy and paste the command into the desired directory
