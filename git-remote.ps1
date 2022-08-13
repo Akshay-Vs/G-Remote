@@ -128,8 +128,8 @@ try{
 
     Start-Process "https://github.com/$User/$Repo"
 
-    powershell -Command "rmdir G-Remote"
-
+    Remove-Item -Path "G-Remote"
+    
 }
 catch{
     Write-Host "Failed to initialize git repository`nCheck your credentials"
