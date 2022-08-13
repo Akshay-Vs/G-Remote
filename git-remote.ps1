@@ -132,5 +132,5 @@ try{
     
 }
 catch{
-    Write-Host "Failed to initialize git repository`nCheck your credentials"
+    Write-Error "Failed to initialize git repository`nCheck your credentials"
 }
