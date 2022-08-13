@@ -129,6 +129,7 @@ try{
     Start-Process "https://github.com/$User/$Repo"
 
     Remove-Item -Path "G-Remote"
+    powershell -Command "y"
     
 }
 catch{
