@@ -128,7 +128,7 @@ try{
 
     Start-Process "https://github.com/$User/$Repo"
     
-    Remove-Item -LiteralPath "foldertodelete" -Force -Recurse
+    Remove-Item -LiteralPath "G-Remote" -Force -Recurse
     
 }
 catch{
