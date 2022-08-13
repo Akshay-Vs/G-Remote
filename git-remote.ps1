@@ -118,7 +118,7 @@ try{
     powershell -Command "git init"
     Write-Host "git: Initialized repository"
     powershell -Command "git add ."
-    powershell -Command 'git commit . -m "Initial Commit"'
+    powershell -Command 'git commit -m "Initial Commit"'
     Write-Host "git: Repository ready to push"
 
     powershell -Command "git remote add origin $Url"
