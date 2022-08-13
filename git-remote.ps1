@@ -7,7 +7,6 @@ $Parms = @{
     Copyright = "2022 Akshay-Vs. All rights reserved."
     RequiredScripts = "Start-WFContosoServer", "Stop-ContosoServerScript"
     Tags = @("git", "git-remote", "automation")
-
     PassThru = $True
     ReleaseNotes = @("Initial Release")
 }
