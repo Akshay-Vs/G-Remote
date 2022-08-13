@@ -39,10 +39,11 @@ $Repo = Read-Host "Enter repository name"
 $Repo = $Repo -replace " ", "-"
 $Description = Read-Host "Enter Description"
 $Private = "false"
-$Url = "https://github.com/$User/$Repo.git"
+
 
 Write-Host "`n`n0) Unlicense`n1) MIT`n2) Apache`n3) GPL3`n4) BSD3"
 $License = Read-Host "Chose a license template"
+
 $Year = Get-Date -Format yyyy
 
 #Generating Readme.md
@@ -120,15 +121,11 @@ try{
     powershell -Command "git add ."
     powershell -Command 'git commit . -m "Initial Commit"'
     Write-Host "git: Repository ready to push"
-
-    powershell -Command "git remote add origin $Url"
     powershell -Command "python -u G-Remote\src\put_request.py 'Readme.md' '$Auth' '$User' '$Repo' 'README.md'"
     powershell -Command "python -u G-Remote\src\put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
     powershell -Command "python -u G-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
     Start-Process "https://github.com/$User/$Repo"
-
-    powershell -Command "rmdir G-Remote"
 
 }
 catch{
