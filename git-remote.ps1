@@ -127,9 +127,8 @@ try{
     powershell -Command "python -u G-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
     Start-Process "https://github.com/$User/$Repo"
-
-    Remove-Item -Path "G-Remote"
-    powershell -Command "y"
+    
+    Remove-Item -LiteralPath "foldertodelete" -Force -Recurse
     
 }
 catch{
