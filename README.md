@@ -6,7 +6,8 @@
  <img align="center" src="https://badgen.net/github/watchers/akshay-vs/G-Remote?color=white"/>&nbsp;
  <img align="center" src="https://badgen.net/github/forks/akshay-vs/G-Remote?color=white"/>&nbsp;
  <img align="center" src="https://badgen.net/badge/powershell/PS1/white"/>
- 
+ <img align="center" src="https://badgen.net/badge/Python/3.9/white"/>
+
 </u></p>
 
 <h4 align="center"> 
