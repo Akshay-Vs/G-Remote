@@ -31,7 +31,7 @@ powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
   - <b>White spaces will be converted to '-' hyphen</b>
 - Enter a description
 - Select a license
-  - <b>The unlicensed license is the default</b>
+  - <b>The unlicense license is the default</b>
 - Wait for the process to complete and you will be redirected to the remote repository
 ## Execution process
 - Downloads license and readme template from GitHub
