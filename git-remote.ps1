@@ -37,7 +37,17 @@ if ($Auth -eq "")
 $Repo = Read-Host "Enter repository name" 
 $Repo = $Repo -replace " ", "-"
 $Description = Read-Host "Enter Description"
-$Private = "false"
+
+$Private = Read-Host "Private repository? (y/n)"
+if($Private.ToLower -eq "y")
+{
+    $Private = "True" 
+}
+else 
+{ 
+    $Private = "False" 
+}
+
 $Url = "https://github.com/$User/$Repo.git"
 
 Write-Host "`n`n0) Unlicense`n1) MIT`n2) Apache`n3) GPL3`n4) BSD3"
