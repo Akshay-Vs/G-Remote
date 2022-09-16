@@ -50,6 +50,8 @@ powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
 - Repo name and Description<br>
     - <b>Repos are private by default</b>
 
+## Requierments
+- Git 2.3 above
 ## Templates
 - <a href="https://raw.githubusercontent.com/Akshay-Vs/license-templates/master/templates"> Readme </a>
 - License
