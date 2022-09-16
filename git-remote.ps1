@@ -41,11 +41,11 @@ $Description = Read-Host "Enter Description"
 $Private = Read-Host "Private repository? (y/n)"
 if($Private.ToLower -eq "y")
 {
-    $Private = "True" 
+    $Private = "true" 
 }
 else 
 { 
-    $Private = "False" 
+    $Private = "false" 
 }
 
 $Url = "https://github.com/$User/$Repo.git"
