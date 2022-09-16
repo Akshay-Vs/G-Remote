@@ -52,6 +52,7 @@ powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
 
 ## Requierments
 - Git 2.3 above
+- Powershell
 ## Templates
 - <a href="https://raw.githubusercontent.com/Akshay-Vs/license-templates/master/templates"> Readme </a>
 - License
