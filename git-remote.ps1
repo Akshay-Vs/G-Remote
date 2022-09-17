@@ -56,12 +56,13 @@ $Year = Get-Date -Format yyyy
 
 #Generating Readme.md
 $Readme = "$<h1 align='center'>$Repo</h1>"
-$Temp = Invoke-WebRequest -Uri https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/BLANK_README.md
+$Temp = Invoke-WebRequest -Uri https://raw.githubusercontent.com/Akshay-Vs/templates/master/README/Black-Night.md
 $Readme = "$Readme`n $Temp"
     #Writing files
     try{
         New-Item "Readme.md"
         Set-Content "Readme.md" -Value $Readme
+        
     }
     catch
     {

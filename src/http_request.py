@@ -1,6 +1,7 @@
 import sys
 import requests
 import json
+from color import Colors
 
 url = "https://api.github.com/user/repos"
 
@@ -18,5 +19,5 @@ headers = {
 
 response = requests.request("POST", url, headers=headers, data=payload)
 
-if response.status_code==201:print(f"Successfully created {sys.argv[2]}")
-else: print(f"Failed to create {sys.argv[2]}")
+if response.status_code==201:Colors.Print(f"Successfully created {sys.argv[2]}")
+else: Colors.Print(f"Failed to create {sys.argv[2]}","LIGHT_RED")
