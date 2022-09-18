@@ -1,130 +1,58 @@
-$<h1 align='center'>Test</h1>
- <h1>
-    <img align="center" src="{Source to image}" width="100%" alt="Project logo/image"/>
-</h1>
-<h2 align="center">Test repo</h2>
-
-
-<hr>
+<h1 align="center"> G Remote - Installation and Usage </h1>
 
 <p align="center"><u>
-    <img align="center" src="https://badgen.net/badge/license/The Unlicense/white"/>&nbsp;
-    <img align="center" src="https://badgen.net/github/stars/Akshay-Vs/Test?color=white"/>&nbsp;
-    <img align="center" src="https://badgen.net/github/watchers/Akshay-Vs/Test?color=white"/>&nbsp;
-    <img align="center" src="https://badgen.net/github/forks/Akshay-Vs/Test?color=white"/>&nbsp;
-    <img align="center" src="https://badgen.net/github/checks/node-formidable/node-formidable/master/Test?color=white"/>&nbsp;
-    <img align="center" src="https://badgen.net/badge/{Lang}/{Ver}/white"/>
- 
+ <img align="center" src="https://badgen.net/badge/license/UNLICENSE/white"/>&nbsp;
+ <img align="center" src="https://badgen.net/github/stars/akshay-vs/G-Remote?color=white"/>&nbsp;
+ <img align="center" src="https://badgen.net/github/watchers/akshay-vs/G-Remote?color=white"/>&nbsp;
+ <img align="center" src="https://badgen.net/github/forks/akshay-vs/G-Remote?color=white"/>&nbsp;
+ <img align="center" src="https://badgen.net/badge/powershell/PS1/white"/>
+ <img align="center" src="https://badgen.net/badge/Python/3.9/white"/>
+
 </u></p>
 
-<hr>
+<h4 align="center"> 
+This is a tool that uses Github API to create a repository, essential license, and readme template from console written in PowerShell ps1</h4>
 
-<pr>
-{Long Descryption} <br>
-{Long Descryption} <br>
-{Long Descryption} <br>
-</pr>
+ ```
+git clone https://github.com/Akshay-Vs/G-Remote.git
+powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
 
-<br>
-<br>
+```
+<h6 align="right"> 👆Copy and paste the command to execute</h6>
+<dl><dd><dl><dd>
 
-<img align="center" src="{Source to image}" width=100% alt="Project screenshot"/>
-
-<br>
-
-<h2 align="left"><u><b>Features</b></u></h2>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  &bull; Feature <br>
-  
- <h2 align='left'><u><b>Languages Used</b></u></h2>
- &bull; message  {version} <br>
- &bull; documentation_url {version}<br>
- 
- <h2 align='left'><u><b>Requerments </b></u></h2>
- &bull; Test requeres {Name} 0.0 or above<br>
- &bull; {Name} 0.0<br>
-
-   
-| requirements | required version |
-| ---------    | ---------------- |
-| {Compiler}   | {version}        |
-| {Package}    | {version}        |
-| {System}     | {version}        |
-| {Libraries}  | {version}        |
-
-<h2 align='left'><u><b>Development</b></u></h2>
-
-&bull; Current version  <a href ="Link To Archive" >0.0 </a><br>
-&bull; Last stable release <a href="Link To Archive" >0.0 </a><br> 
-
-<br>
-<hr>
-<details>
- <summary>&bull;<b> Change Log:</b></summary>
-<pre>
-
-| version | release date |Changes   |
-|---------|--------------|----------|
-|{version}|{release date}|ChangeLog |
-|{version}|{release date}|ChangeLog |
-|{version}|{release date}|ChangeLog |
-|{version}|{release date}|ChangeLog |
-
-</pre>
-</details>
-
-<h2 align="left"><b>Connect with me</b></h2>
-<p align="left">
-    <a href="https://twitter.com/user" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@Twitter" height="30" width="40" /></a>
-    <a href="[Stackoverflow]" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="Stackoverflow" height="30" width="40" /></a>
-    <a href="https://instagram.com/username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="username" height="30" width="40" /></a>
-</p>
-
-<h2 align='left'><u><b>Installation</b></u></h2>
-<p>Install using git bash 
-<code>$git clone https://github.com/Akshay-Vs/Test.git</code><br>
-
- Or click download button ???? <br>
- <a href="Link To archive" target="blank"><img align="center" src="https://github.com/Akshay-Vs/resources/blob/main/src/download_bt.png" alt="Download" height="78" width="200" /></a>
- 
-Download installer ???? <br>
- <a href="Link To Sourceforge" target="blank"> <img src="https://github.com/Akshay-Vs/resources/blob/main/src/download%20(1).png" alt="Download" height="78" width="200"></a>
- 
-<hr>
-
-<h2 align='left'><u><b>Instructions</b></u></h2>
-&#9724;Instruction<br>
-&#9724;Instructionr<br>
-&#9724;Instruction<br>
-&#9724;Instruction
-
-<br>
-
-<h2 align='left'><u><b>Docs</b></u></h2>
-<code> Command </code> - Use <br>
-<code> Command </code> - Use <br>
-<code> Command </code> - Use <br>
-<code> Command </code> - Use <br>
+## Setup
+- Open desired directory, then open cmd/powershell in the directory
+- Copy and paste the command
+- Enter the Github username
+- Enter the authentication key provided by GitHub
+  - <b>Leaving this blank will redirect to the Personal Access Token page</b>
+- Enter the repository name
+  - <b>White spaces will be converted to '-' hyphen</b>
+- Enter a description
+- Select a license
+  - <b>The unlicense license is the default</b>
+- Wait for the process to complete and you will be redirected to the remote repository
+## Execution process
+- Downloads license and readme template from GitHub
+- Git starts in the local directory
+- Commits all files to the local repository
+- Creating a directory on GitHub using the Github API
+- Pushes all files to remote repository
+- Open the browser and redirect to the remote repository
+- Deletes g-remote files from the directory
 
 
+## Credentials
+- Username  - Github username
+- Auth - <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Authention token</a>
+    - <b>permission - repo:Full control of private repository</b>
+- Repo name and Description<br>
+    - <b>Repos are private by default</b>
 
-<h2>Developers</h2>
-<h3><a href="https://github.com/Akshay-Vs" target="blank"><img src="https://avatars.githubusercontent.com/u/85959609?v=4" height="3.5%" width="3.5%" alt="Akshay-Vs"></a> - Akshay-Vs
-
-<br>
-
-<h2 align='left'><u><b>License and Copyright</b></u></h2>
-License: The Unlicense<br>
-&#169; {Year} Akshay-Vs
-<br>
-<h6 align="center">Generated By <a href="https://github.com/Akshay-Vs/G-Remote">G-Remote</a></h6>
-
- 
-
-
+## Requierments
+- Git 2.3 above
+- Powershell
+## Templates
+- <a href="https://raw.githubusercontent.com/Akshay-Vs/license-templates/master/templates"> Readme </a>
+- License
