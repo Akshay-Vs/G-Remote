@@ -42,9 +42,7 @@ $License = Read-Host "Chose a license template"
 $Year = Get-Date -Format yyyy
 
 #Generating Readme.md
-$Readme = "$<h1 align='center'>$Repo</h1>"
-$Temp = Invoke-WebRequest -Uri https://raw.githubusercontent.com/Akshay-Vs/templates/master/README/Black-Night.md
-$Readme = "$Readme`n $Temp"
+$Readme = Invoke-WebRequest -Uri https://raw.githubusercontent.com/Akshay-Vs/templates/master/README/Black-Night.md
     #Writing files
     try{
         New-Item "Readme.md" -Force
