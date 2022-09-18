@@ -119,7 +119,6 @@ try{
 
     powershell -Command "python -u 'G-remote\src\generate_readme.py' '$Auth' '$User' '$Repo' 'Readme.md'"
     powershell -Command "python -u 'G-remote\src\put_request.py' 'Readme.md' '$Auth' '$User' '$Repo' 'Readme.md'"
-    powershell -Command "git pull"
 
     Start-Process "https://github.com/$User/$Repo"
     
