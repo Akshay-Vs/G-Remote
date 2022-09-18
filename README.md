@@ -18,7 +18,9 @@ git clone https://github.com/Akshay-Vs/G-Remote.git
 powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
 
 ```
-<h6 align="right"> 👆Copy and paste the command to execute</h6>
+<h6 align="right"> 👆Copy and paste the command to execute
+<h5 align="left"><a href="https://github.com/Akshay-Vs/G-Remote_Preview" target="_blank">Click for a preview</a></h5>
+</h6>
 <dl><dd><dl><dd>
 
 ## Setup
