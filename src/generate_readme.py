@@ -48,6 +48,6 @@ with open(argv[4], 'r') as file:
         Readme = Readme.replace('{Primary Language}',primary_language)
         Readme = Readme.replace('{Version}','0.0')
         Readme = Readme.replace('{Secondary language}',secondary_language)
-    result = open("Readme_.md",'w+').write(Readme)
+    result = open("Readme.md",'w+').write(Readme)
 
 Colors.Print("[Info] Generated Readme.md from Black-Night template")
