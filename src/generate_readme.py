@@ -2,6 +2,7 @@ from sys import argv
 from base64enc import encode
 from os import system
 from color import Colors
+from datetime import date
 import requests
 import json
 
@@ -35,6 +36,7 @@ with open(argv[4], 'r') as file:
     Readme = Readme.replace('{Repo}',repo)
     Readme = Readme.replace('{Description}',description)
     Readme = Readme.replace('{Avatar}',avatar)
+    Readme = Readme.replace('{Year}', f"{date.today().year}")
 
     if response["license"] != None:
         license = response["license"]["name"]
@@ -46,24 +48,6 @@ with open(argv[4], 'r') as file:
         Readme = Readme.replace('{Primary Language}',primary_language)
         Readme = Readme.replace('{Version}','0.0')
         Readme = Readme.replace('{Secondary language}',secondary_language)
-    result = open("Readme.md",'w+').write(Readme)
+    result = open("Readme_.md",'w+').write(Readme)
 
-Colors.Print("[Info] Readme.md Generated from Black-Night template")
-
-#put data
-# data = encode(open(argv[4], 'r').read())
-# url = f"https://api.github.com/repos/{argv[2]}/{argv[3]}/contents/Readme.md"
-
-# put_header= {
-#   'Authorization': f'Bearer {argv[1]}',
-#   'Content-Type': 'application/json'
-# }
-
-# payload = json.dumps({
-#   "message": "Create Readme.md",
-#   "content": f"{data}"
-# })
-# response = requests.request("PUT", url, headers=put_header, data=payload)
-# print(response.text)
-# if response.status_code==201:Colors.Print(f"201: Successfully Created Readme.md")
-# else:Colors.Print(f"{response.status_code}: Failed to push Readme.md", "LIGHT_RED")
+Colors.Print("[Info] Generated Readme.md from Black-Night template")
