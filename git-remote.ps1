@@ -1,17 +1,4 @@
-$Parms = @{
-    Verbose = $True
-    Version = "1.0"
-    Author = "akshay.vs2005@gmail.com"
-    Description = "Script to automate git remote"
-    CompanyName = "Akshay-Vs"
-    Copyright = "2022 Akshay-Vs. All rights reserved."
-    RequiredScripts = "Start-WFContosoServer", "Stop-ContosoServerScript"
-    Tags = @("git", "git-remote", "automation")
-    PassThru = $True
-    ReleaseNotes = @("Initial Release")
-}
-"$Parms"
-#Clearing Console
+
 powershell -Command "cls"
 
 function Download($name)
@@ -60,7 +47,7 @@ $Temp = Invoke-WebRequest -Uri https://raw.githubusercontent.com/Akshay-Vs/templ
 $Readme = "$Readme`n $Temp"
     #Writing files
     try{
-        New-Item "Readme.md"
+        New-Item "Readme.md" -Force
         Set-Content "Readme.md" -Value $Readme
         
     }
@@ -97,7 +84,7 @@ $Readme = "$Readme`n $Temp"
 
     #writting License
     try{
-        New-Item "LICENSE"
+        New-Item "LICENSE" -Force
         Set-Content "LICENSE" -Value $License
     }
     catch
@@ -109,7 +96,7 @@ $Readme = "$Readme`n $Temp"
 $Temp = Invoke-WebRequest -Uri https://raw.githubusercontent.com/Akshay-Vs/templates/master/gitignore-template.txt
     #Writing files
     try{
-        New-Item ".gitignore"
+        New-Item ".gitignore" -Force
         Set-Content ".gitignore" -Value $Temp
     }
     catch
@@ -123,18 +110,13 @@ try{
 
     #Creating git repository
     #Executin a python file
-    powershell -Command "python -u G-Remote/src/http_request.py '$Auth' '$Repo' '$Description' '$Private'"
+    powershell -Command "python -u 'src\create_repo.py' '$Auth' '$Repo' '$Description' '$Private'"
+    powershell -Command "python -u 'src\put_request.py' 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
+    powershell -Command "python -u 'src\put_request.py' '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
-    powershell -Command "git init"
-    Write-Host "git: Initialized repository"
-    powershell -Command "git add ."
-    powershell -Command 'git commit -m "Initial Commit"'
-    Write-Host "git: Repository ready to push"
-
-    powershell -Command "git remote add origin $Url"
-    powershell -Command "python -u G-Remote\src\put_request.py 'Readme.md' '$Auth' '$User' '$Repo' 'README.md'"
-    powershell -Command "python -u G-Remote\src\put_request.py 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
-    powershell -Command "python -u G-Remote\src\put_request.py '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
+    powershell -Command "python -u 'src\generate_readme.py' '$Auth' '$User' '$Repo' 'Readme.md'"
+    powershell -Command "python -u 'src\put_request.py' 'Readme.md' '$Auth' '$User' '$Repo' 'Readme.md'"
+    powershell -Command "git pull"
 
     Start-Process "https://github.com/$User/$Repo"
     

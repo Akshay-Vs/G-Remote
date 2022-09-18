@@ -38,7 +38,7 @@ class Colors:
             del kernel32
 
     def Print(message, color="LIGHT_CYAN"):
-        print("{:>16} {}".format("", getattr(Colors, "LIGHT_CYAN") + message + Colors.END))
+        print("{:>16} {}".format("", getattr(Colors, color) + message + Colors.END))
 
 if __name__ == '__main__':
-    Colors.Print("Hello World")
+    Colors.Print("Hello World", "LIGHT_RED")

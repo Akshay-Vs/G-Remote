@@ -1,5 +1,5 @@
 <h1>
-    <img align="center" src="{Source to image}" width="100%" alt="Project logo/image"/>
+    <img align="center" src="{Source to image}" width="100%" alt="{Repo} logo/image"/>
 </h1>
 <h2 align="center">{Description}</h2>
 

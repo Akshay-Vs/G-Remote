@@ -2,6 +2,7 @@ import requests
 import json
 from sys import argv
 from base64enc import encode
+from color import Colors
 
 data = encode(open(argv[1], 'r').read())
 auth = argv[2]
@@ -22,5 +23,5 @@ headers = {
 
 response = requests.request("PUT", url, headers=headers, data=payload)
 
-if response.status_code==201:print(f"201: success")
-else: print(f"Failed to push {argv[1]}")
+if response.status_code==201:Colors.Print(f"201: Successfully Created {filename}")
+else:Colors.Print(f"{response.status_code}: Failed to push {argv[1]}", "LIGHT_RED")

@@ -1,12 +1,23 @@
 from sys import argv
+from base64enc import encode
+from os import system
+from color import Colors
 import requests
 import json
-import color
 
-#argv path_to_readme user repo
+#argv auth user repo path_to_readme
+Colors.Print("[Info] Generating Readme")
+Colors.Print("[Info] Downloading Template")
 
-response = requests.request("GET",f"https://api.github.com/repos/{argv[2]}/{argv[3]}")
+headers = {
+    'Authorization': f'Bearer {argv[1]}'
+}
+
+response = requests.request("GET", f"https://api.github.com/repos/{argv[2]}/{argv[3]}", headers=headers)
 response = json.loads(response.text)
+
+#print(response)
+Colors.Print("[Info] Writing Contents")
 
 user = response["owner"]["login"]
 repo = response["name"]
@@ -18,7 +29,7 @@ language = response["languages_url"]
 language = requests.request("GET", language)
 language = json.loads(language.text)
 
-with open(argv[1], 'r') as file:
+with open(argv[4], 'r') as file:
     Readme = file.read()
     Readme = Readme.replace('{User}',user)
     Readme = Readme.replace('{Repo}',repo)
@@ -35,7 +46,24 @@ with open(argv[1], 'r') as file:
         Readme = Readme.replace('{Primary Language}',primary_language)
         Readme = Readme.replace('{Version}','0.0')
         Readme = Readme.replace('{Secondary language}',secondary_language)
-    result = open("result.md",'w+').write(Readme)
+    result = open("Readme.md",'w+').write(Readme)
 
-    
+Colors.Print("[Info] Readme.md Generated from Black-Night template")
 
+#put data
+# data = encode(open(argv[4], 'r').read())
+# url = f"https://api.github.com/repos/{argv[2]}/{argv[3]}/contents/Readme.md"
+
+# put_header= {
+#   'Authorization': f'Bearer {argv[1]}',
+#   'Content-Type': 'application/json'
+# }
+
+# payload = json.dumps({
+#   "message": "Create Readme.md",
+#   "content": f"{data}"
+# })
+# response = requests.request("PUT", url, headers=put_header, data=payload)
+# print(response.text)
+# if response.status_code==201:Colors.Print(f"201: Successfully Created Readme.md")
+# else:Colors.Print(f"{response.status_code}: Failed to push Readme.md", "LIGHT_RED")
