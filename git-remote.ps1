@@ -110,12 +110,12 @@ try{
 
     #Creating git repository
     #Executin a python file
-    powershell -Command "python -u 'src\create_repo.py' '$Auth' '$Repo' '$Description' '$Private'"
-    powershell -Command "python -u 'src\put_request.py' 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
-    powershell -Command "python -u 'src\put_request.py' '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
+    powershell -Command "python -u 'G-remote\src\create_repo.py' '$Auth' '$Repo' '$Description' '$Private'"
+    powershell -Command "python -u 'G-remote\src\put_request.py' 'LICENSE' '$Auth' '$User' '$Repo' 'LICENSE'"
+    powershell -Command "python -u 'G-remote\src\put_request.py' '.gitignore' '$Auth' '$User' '$Repo' '.gitignore'"
 
-    powershell -Command "python -u 'src\generate_readme.py' '$Auth' '$User' '$Repo' 'Readme.md'"
-    powershell -Command "python -u 'src\put_request.py' 'Readme.md' '$Auth' '$User' '$Repo' 'Readme.md'"
+    powershell -Command "python -u 'G-remote\src\generate_readme.py' '$Auth' '$User' '$Repo' 'Readme.md'"
+    powershell -Command "python -u 'G-remote\src\put_request.py' 'Readme.md' '$Auth' '$User' '$Repo' 'Readme.md'"
     powershell -Command "git pull"
 
     Start-Process "https://github.com/$User/$Repo"
