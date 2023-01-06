@@ -35,14 +35,14 @@ powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
 - Select a license
   - <b>The unlicense license is the default</b>
 - Wait for the process to complete and you will be redirected to the remote repository
+ 
 ## Execution process
-- Downloads license and readme template from GitHub
-- Git starts in the local directory
-- Commits all files to the local repository
-- Creates a directory on GitHub using the Github API
-- Pushes all files to remote repository
+- Download license and readme template from GitHub
+- Commit all files to the local repository
+- Create a new repository on GitHub using the Github API
+- Push all files to remote repository
 - Open the browser and redirect to the remote repository
-- Deletes g-remote files from the directory
+- Delete g-remote files from the directory
 
 
 ## Credentials
