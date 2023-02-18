@@ -9,7 +9,7 @@ Download() {
     Template=${Template/@Repo/$Repo}
     echo "$Template"
 }
-
+clear
 # Reading Credentials
 read -p "Enter your GitHub username: " User
 
