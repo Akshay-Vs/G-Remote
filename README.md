@@ -11,14 +11,19 @@
 </u></p>
 
 <h4 align="center"> 
-This is a tool that uses Github API to create a repository, essential license, and readme template from console written in PowerShell ps1</h4>
+This is a tool that uses Github API to create a repository, essential license, and readme template from console</h4>
 
  ```
 git clone https://github.com/Akshay-Vs/G-Remote.git
 powershell -ExecutionPolicy ByPass -File G-Remote/git-remote.ps1
-
 ```
 <h6 align="right"> 👆Copy and paste the command to execute
+
+<h4>For Linux Distros</h4>
+
+```
+git clone https://github.com/Akshay-Vs/G-Remote.git && cd G-Remote  && chmod +x g-remote.sh && ./g-remote.sh
+```
 <h5 align="left"><a href="https://github.com/Akshay-Vs/G-Remote_Preview" target="_blank">Click for a preview</a></h5>
 </h6>
 <dl><dd><dl><dd>
