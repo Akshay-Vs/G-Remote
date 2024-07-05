@@ -11,7 +11,7 @@
 </u></p>
 
 <h4 align="center"> 
-This is a tool that uses Github API to create a repository, essential license, and readme template from console</h4>
+This is a tool that uses Github API to create a repository, license, and readme template from console</h4>
 
  ```
 git clone https://github.com/Akshay-Vs/G-Remote.git
